@@ -38,5 +38,8 @@ It runs the docker image from my repo on docker hub on kubernetes on port 80 the
 $ ./run_kubernetes.sh
 ```
 
+## output_txt_files
+It contains the logs content from docker image with make_prediction request and kubernetes terminal output from running till make_prediction request.
+
 ## CircleCI State
 [![AymanAzzam](https://circleci.com/gh/AymanAzzam/Docker_Kubernetes.svg?style=svg)](https://app.circleci.com/pipelines/github/AymanAzzam/Docker_Kubernetes)
