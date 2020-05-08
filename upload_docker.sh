@@ -11,7 +11,8 @@ dockerpath=aymanazzam07/api
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker tag 31160527efec $dockerpath:firsttry
 
 # Step 3:
 # Push image to a docker repository
-docker tag 31160527efec $dockerpath:firsttry
+docker push $dockerpath
