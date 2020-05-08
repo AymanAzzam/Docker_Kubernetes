@@ -57,15 +57,15 @@ def predict():
     
     # Logging the input payload
     json_payload = request.json
-    LOG.info("JSON payload: \n" + json.dumps(json_payload) + "\n")
+    LOG.info("JSON payload: \n%s \n",json.dumps(json_payload))
     inference_payload = pd.DataFrame(json_payload)
-    LOG.info("Inference payload DataFrame: \n" + inference_payload.to_string() + "\n")
+    LOG.info("Inference payload DataFrame: \n%s \n",inference_payload.to_string())
     # scale the input
     scaled_payload = scale(inference_payload)
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
     # TO DO:  Log the output prediction value
-    LOG.info("Output prediction: \n" + str(prediction[0]))
+    LOG.info("Output prediction: \n%s \n",str(prediction[0]))
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
